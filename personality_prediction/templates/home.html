@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'static/style.css' %}">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1>PERSONALITY TEST</h1>
+        <form action="{% url 'result' %}" >
+
+            {% csrf_token %}
+            <ol>
+                <li>
+                    <label for="EXT1">I am the life of the party</label><br>
+                    <select name="EXT1" id="EXT1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT2">I dont talk a lot</label><br>
+                    <select name="EXT2" id="EXT2">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT3">I feel comfortable around people</label><br>
+                    <select name="EXT3" id="EXT3">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT4">I keep in the background</label><br>
+                    <select name="EXT4" id="EXT4">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EST5">I start conversations</label><br>
+                    <select name="EXT5" id="EXT5">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT6">I have little to say</label><br>
+                    <select name="EXT6" id="EXT6">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT7">I talk to a lot of different people at parties</label><br>
+                    <select name="EXT7" id="EXT7">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT8">I dont like to draw attention to myself</label><br>
+                    <select name="EXT8" id="EXT1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT9">I dont mind being the center of attention</label><br>
+                    <select name="EXT9" id="EXT9">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="EXT10">I am quiet around strangers</label><br>
+                    <select name="EXT10" id="EXT10">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label FOR="EST1">I get stressed out easily</label><br>
+                    <select name="EST1" id="EST1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST2">I am relaxed most of the time</label><br>
+                    <select name="EST2" id="EST2">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST3">I worry about things</label><br>
+                    <select name="EST3" id="EST3">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST4">I seldom feel blue</label><br>
+                    <select name="EST4" id="EST4">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST5">I am easily disturbed</label><br>
+                    <select name="EST5" id="EST5">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST6">I get upset easily</label><br>
+                    <select name="EST6" id="EST6">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST7">I change my mood a lot</label><br>
+                    <select name="EST7" id="EST7">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST8">I have frequent mood swings</label><br>
+                    <select name="EST8" id="EST8">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST9">I get irritated easily</label><br>
+                    <select name="EST9" id="EST9">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li><li>
+                    <label for="EST10">I often feel blue</label><br>
+                    <select name="EST10" id="EST10">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <!--AGREEABLENESS-->
+                <li>
+                    <label for="AGR1">I feel little concern for others</label><br>
+                    <select name="AGR1" id="AGR1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR2">I am interested in people</label><br>
+                    <select name="AGR2" id="AGR2">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR3">I insult people</label><br>
+                    <select name="AGR3" id="AGR3">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR4">I sympathize with others feelings</label><br>
+                    <select name="AGR4" id="AGR4">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR5">I am not interested in other peoples problems</label><br>
+                    <select name="AGR5" id="AGR5">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR6">I have a soft heart</label><br>
+                    <select name="AGR6" id="AGR6">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR7">I am not really interested in others</label><br>
+                    <select name="AGR7" id="AGR7">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR8">I take time out for others</label><br>
+                    <select name="AGR8" id="AGR8">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR9">I feel others emotions</label><br>
+                    <select name="AGR9" id="AGR9">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="AGR10">I make people feel at ease</label><br>
+                    <select name="AGR10" id="AGR10">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <!--cONSCIENITOUSNESS-->
+                <li>
+                    <label for="CSN1">I am always prepared</label><br>
+                    <select name="CSN1" id="CSN1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN2">I leave my belongings around</label><br>
+                    <select name="CSN2" id="CSN2">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN3">I pay attention to details</label><br>
+                    <select name="CSN3" id="CSN3">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN4">I make a mess of things</label><br>
+                    <select name="CSN4" id="CSN4">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN5">I get chores done right away</label><br>
+                    <select name="CSN5" id="CSN5">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN6">I often forget to put things back in their proper place</label><br>
+                    <select name="CSN6" id="CSN6">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN7">I like order</label><br>
+                    <select name="CSN7" id="CSN7">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN8">I shirk my duties</label><br>
+                    <select name="CSN8" id="CSN8">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN9">I follow a schedule</label><br>
+                    <select name="CSN9" id="CSN9">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="CSN10">I am exacting in my work</label><br>
+                    <select name="CSN10" id="CSN10">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <!--Open to Experience-->
+                <li>
+                    <label for="OPN1">I have a rich vocabulary</label><br>
+                    <select name="OPN1" id="OPN1">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN2">I have difficulty understanding abstract ideas</label><br>
+                    <select name="OPN2" id="OPN2">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN3">I have a vivid imagination</label><br>
+                    <select name="OPN3" id="OPN3">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN4">I am not interested in abstract ideas</label><br>
+                    <select name="OPN4" id="OPN4">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label>I have excellent ideas</label><br>
+                    <select name="OPN5" id="OPN5">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN6">I do not have a good imagination</label><br>
+                    <select name="OPN6" id="OPN6">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN7">I am quick to understand things</label><br>
+                    <select name="OPN7" id="OPN7">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN8">I use difficult words</label><br>
+                    <select name="OPN8" id="OPN8">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN9">I spend time reflecting on things</label><br>
+                    <select name="OPN9" id="OPN9">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="OPN10">I am full of ideas</label><br>
+                    <select name="OPN10" id="OPN10">
+                        <option value="0">Select an option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                </li>
+            </ol>
+            <input type="submit" value="Submit Ratings">
+        </form>    
+    </body>
+</html>
